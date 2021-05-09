@@ -110,6 +110,14 @@ function generatePassword() {
     caseArray = upperCase.concat(lowerCase, numbers, specials);
     console.log(caseArray);
   }
+
+  passwordString = "";
+  for (var i = 0; i < charLength; i++){
+    var random = Math.floor(Math.random() * caseArray.length);
+    var letter = caseArray[random];
+    passwordString = passwordString + letter;
+  }
+  return passwordString;
 }
 
 // Get references to the #generate element
